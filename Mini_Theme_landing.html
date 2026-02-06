@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root {
+            --primary-color: rgb(186, 220, 214);
+            --secondary-color: rgb(255, 242, 188);
+            --background-color: rgb(249, 250, 244);
+            --text-color: rgb(58, 70, 65);
+            --border-radius: 12px;
+            --spacing-small: 8px;
+            --spacing-medium: 16px;
+            --spacing-large: 32px;
+            --base-font-size: 16px;
+            --heading-font-size: 32px;
+        }
+
+        body.dark-theme {
+            --primary-color: rgb(144, 190, 170);
+            --secondary-color: rgb(92, 115, 102);
+            --background-color: rgb(26, 36, 33);
+            --text-color: rgb(232, 245, 239);
+        }
+
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: var(--base-font-size);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: var(--spacing-medium);
+        }
+
+        .hero {
+            text-align: center;
+            padding: var(--spacing-large);
+        }
+
+        .card {
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-medium);
+            margin: var(--spacing-small);
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-small) var(--spacing-medium);
+
+        }
+
+        .button:hover {
+            background-color: rgb(41, 128, 185);
+            cursor: pointer;
+        }
+
+        .footer {
+            padding: var(--spacing-medium);
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --base-font-size: 14px;
+                --heading-font-size: 20px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1200px) {
+            :root {
+                --base-font-size: 18px;
+                --heading-font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Mini Theme Landing Page</h1>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+    <div class="hero">
+        <h2>Welcome to a Softer Digital Experience</h2>
+        <p>Design that feels calm, friendly, and effortless. Explore a space where simplicity meets elegance, crafted to look beautiful on every device..</p>
+        <button class="button">Get Started</button>
+    </div>
+    <div class="card">
+        <h3>Minimalist Design</h3>
+        <p>Foe Best Experience</p>
+        <button class="button">Learn More</button>
+    </div>
+    <div class="card">
+        <h3>Pastem Colors</h3>
+        <p>For Better Aesthetics</p>
+        <button class="button">Learn More</button>
+    </div>
+    <div class="card">
+        <h3>Sooting Experience</h3>
+        <p>For a Calming Atmosphere</p>
+        <button class="button">Learn More</button>
+    </div>
+    <div class="footer">
+        <p>2026.All rights reserved.</p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+
+</html>
